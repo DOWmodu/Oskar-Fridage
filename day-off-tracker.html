@@ -1,39 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Day Off Tracker</title>
+    <title>Fridags Tracker</title>
     <style>
         body { font-family: Arial, sans-serif; text-align: center; }
         #counter { font-size: 40px; margin: 20px; }
-        button { font-size: 20px; padding: 10px; }
+        button { font-size: 20px; padding: 10px; margin: 10px; }
     </style>
 </head>
 <body>
 
-    <h1>Day Off Tracker</h1>
-    <p id="counter">5</p>
-    <button onclick="takeDayOff()">Take a Day Off</button>
-    <button onclick="reset()">Reset for New School Year</button>
+    <h1>Fridags Tracker</h1>
+    <p id="counter">7</p>
+    <button onclick="takeDayOff()">Fridag</button>
+    <button onclick="reset()">Nyt skoleår</button>
 
     <script>
-        let counter = 5;
+        let counter = 7;
 
         function takeDayOff() {
             if (counter > 0) {
                 counter--;
                 document.getElementById("counter").textContent = counter;
-                alert(`You've chosen a day off! ${counter} left—make it a good one!`);
+                alert(`Du har valgt en fridag! ${counter} tilbage—nyd den!`);
             } else {
-                alert("You've used all your days off! Time to focus!");
+                alert("Du har brugt alle dine fridage! Fokusér nu på skolen!");
             }
         }
 
         function reset() {
-            counter = 5;
+            counter = 7;
             document.getElementById("counter").textContent = counter;
-            alert("Your days off have been reset for the new school year!");
+            alert("Dine fridage er blevet nulstillet til det nye skoleår!");
         }
     </script>
 
