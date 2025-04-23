@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fridags Tracker</title>
+    <title>Oskars Fridage</title>
     <style>
         body { font-family: Arial, sans-serif; text-align: center; }
         #counter { font-size: 40px; margin: 20px; }
@@ -12,7 +12,7 @@
 </head>
 <body>
 
-    <h1>Fridags Tracker</h1>
+    <h1>Oskars Fridage</h1>
     <p id="counter">7</p>
     <button onclick="takeDayOff()">Fridag</button>
     <button onclick="reset()">Nyt skoleår</button>
@@ -31,9 +31,14 @@
         }
 
         function reset() {
-            counter = 7;
-            document.getElementById("counter").textContent = counter;
-            alert("Dine fridage er blevet nulstillet til det nye skoleår!");
+            let code = prompt("Indtast reset-koden for nyt skoleår:");
+            if (code === "131014") {  // Updated reset code
+                counter = 7;
+                document.getElementById("counter").textContent = counter;
+                alert("Dine fridage er blevet nulstillet til det nye skoleår!");
+            } else {
+                alert("Forkert kode! Fridags-tælleren er ikke nulstillet.");
+            }
         }
     </script>
 
