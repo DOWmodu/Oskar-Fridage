@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day Off Tracker</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        #counter { font-size: 40px; margin: 20px; }
+        button { font-size: 20px; padding: 10px; }
+    </style>
+</head>
+<body>
+
+    <h1>Day Off Tracker</h1>
+    <p id="counter">5</p>
+    <button onclick="takeDayOff()">Take a Day Off</button>
+    <button onclick="reset()">Reset for New School Year</button>
+
+    <script>
+        let counter = 5;
+
+        function takeDayOff() {
+            if (counter > 0) {
+                counter--;
+                document.getElementById("counter").textContent = counter;
+                alert(`You've chosen a day off! ${counter} left—make it a good one!`);
+            } else {
+                alert("You've used all your days off! Time to focus!");
+            }
+        }
+
+        function reset() {
+            counter = 5;
+            document.getElementById("counter").textContent = counter;
+            alert("Your days off have been reset for the new school year!");
+        }
+    </script>
+
+</body>
+</html>
